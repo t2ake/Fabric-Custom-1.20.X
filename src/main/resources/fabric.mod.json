@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "custommod",
+	"version": "${version}",
+	"name": "Custom Mod",
+	"description": "This is a Custom Mod made by t2ake! ;3",
+	"authors": [
+		"t2ake!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/custommod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.t2ake.custommod.CustomMod"
+		],
+		"client": [
+			"net.t2ake.custommod.CustomModClient"
+		],
+		"fabric-datagen": [
+			"net.t2ake.custommod.CustomModDataGenerator"
+		]
+	},
+	"mixins": [
+		"custommod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
